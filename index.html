@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Order summary card</title>
+
+  <style>
+   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+  /*resets*/
+  *, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+/*variables*/
+:root {
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+  --Dark-blue: hsl(223, 47%, 23%);
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+}
+
+body {
+  font-size: 16px;
+  display: grid;
+  place-items: center;
+  font-family: 'Red Hat Display', sans-serif;
+  color: var(--Dark-blue);
+  background: url(images/pattern-background-desktop.svg) no-repeat;
+  background-size: contain;
+}
+@media screen and (max-width: 800px) {
+  body {
+    background: url(images/pattern-background-mobile.svg) no-repeat;
+    background-size: contain;
+  }
+}
+section {
+  
+  background-color: var(--Very-pale-blue);
+  max-width: 450px;
+}
+.card {
+  border-radius: 20px;
+  margin-top: 50px;
+  box-shadow: -1px 20px 94px 0px rgba(63,58,212,0.14);
+  background-color: white;
+}
+.picture img {
+  border-radius: 10px 10px 0 0;
+}
+.content {
+  text-align: center;
+  padding: 2rem 3rem;
+  display: grid;
+  gap: 20px;
+}
+.content h1 {
+  font-weight: 800;
+}
+.content h2 {
+  font-weight: 600;
+  font-size: 16px;
+}
+.content p {
+  color: var(--Desaturated-blue);
+
+}
+.subscribe {
+  display: flex;
+  align-items: center;
+  background-color: var(--Very-pale-blue);
+  ;
+  border-radius: 10px;
+  padding: 1rem;
+}
+.subscribe img {
+  margin-right: 20px;
+}
+.change {
+  width: 50%;
+  text-align: end;
+  color: var(--Bright-blue);
+  font-size: 14px;
+  text-decoration: underline;
+}
+.plan p {
+  font-size: 14px;
+  text-align: start;
+}
+
+button {
+  background-color: var(--Bright-blue);
+  box-shadow: 2px 10px 17px 0px rgba(63,58,212,0.34);
+  border: none;
+  color: white;
+  font-weight: 700;
+  border-radius: 5px;
+  padding: 10px;
+}
+button:hover, .change:hover {
+  cursor: pointer;
+  opacity: 0.8;
+  text-decoration: none;
+}
+.cancel {
+  font-weight: 600;
+}
+.cancel:hover {
+  color: var(--Dark-blue);
+  cursor: pointer;
+}
+.attribution {
+  margin-top: 2rem;
+  color: var(--Desaturated-blue);
+}
+.attribution a {
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--Dark-blue)
+}
+a:hover {
+  color: var(--Bright-blue);
+}
+
+  </style>
+</head>
+<body>
+  <section class="card">
+    <div class="picture">
+      <img src="images/illustration-hero.svg" alt="illustration women listen to music">
+    </div>
+    <div class="content">
+      <h1>Order Summary</h1>
+      <p>You can now listen to millions of songs, audiobooks, and podcasts on any 
+        device anywhere you like! </p>
+    
+      <div class="subscribe">
+        <img src="images/icon-music.svg" alt="icon music">
+        <div class="plan">
+          <h2>Annual Plan</h2>
+          <p>$59.99/year</p>
+        </div>
+        <h3 class="change">Change</h3>
+      </div>
+      <button>Proceed to Payment</button>
+      <p class="cancel"> Cancel Order</p>
+    </div>
+  </section>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/Hatchino">Hatchino</a>.
+  </div>
+</body>
+</html>
