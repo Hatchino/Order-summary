@@ -28,6 +28,7 @@ body {
   font-size: 16px;
   display: grid;
   place-items: center;
+  min-height: 100vh;
   font-family: 'Red Hat Display', sans-serif;
   color: var(--Dark-blue);
   background: url(images/pattern-background-desktop.svg) no-repeat;
@@ -37,17 +38,17 @@ body {
 @media screen and (max-width: 800px) {
   body {
     background: url(images/pattern-background-mobile.svg) no-repeat;
-    background-size: contain;
+    background-size: cover;
+    background-color: var(--Pale-blue);
   }
 }
 section {
-  
+  position: relative;
   background-color: var(--Very-pale-blue);
   max-width: 450px;
 }
 .card {
   border-radius: 20px;
-  margin-top: 50px;
   box-shadow: -1px 20px 94px 0px rgba(63,58,212,0.14);
   background-color: white;
 }
@@ -116,8 +117,9 @@ button:hover, .change:hover {
   cursor: pointer;
 }
 .attribution {
-  margin-top: 2rem;
   color: var(--Desaturated-blue);
+  position: absolute;
+  bottom: 0;
 }
 .attribution a {
   font-weight: bold;
